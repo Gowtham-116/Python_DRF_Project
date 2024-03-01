@@ -1,0 +1,21 @@
+{%extends "base.html" %}
+{%load static %}
+
+{%block css_files%}
+<link rel='stylesheet' href='{% static "challenges/challenges.css" %}'>
+{% endblock%}
+
+{%block page_title%}
+    All Challenge
+{%endblock%}
+
+{%block content%}
+    {% include "challenges/includes/header.html" with active_page='index'%}
+    <ul> 
+        {% for month in months%}     
+            <!--<li><a href='/challenges/{{month}}'> {{month|upper}} </a></li>-->
+            <li><a href='{% url "monthly_challenge" month=month%}'> {{month|upper}} </a></li>
+        {%endfor%}
+
+    </ul>
+{%endblock%}

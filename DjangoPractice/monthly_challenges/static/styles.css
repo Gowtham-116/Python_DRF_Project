@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+html{
+    font-family: 'Caveat', cursive;
+}
+
+body{
+    margin: 100;
+    background-color: rgb(19, 17, 17);
+}
